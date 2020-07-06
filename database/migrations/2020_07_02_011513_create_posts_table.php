@@ -21,7 +21,7 @@ class CreatePostsTable extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->string('title');
-            $table->string('description');
+            $table->string('description', 255);
             $table->string('img_url');
             $table->timestamps();
         });

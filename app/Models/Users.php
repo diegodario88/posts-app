@@ -12,4 +12,9 @@ class Users extends Model
         'password',
         'avatar_url',
     ];
+
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Posts', 'id', 'id_user');
+    }
 }
