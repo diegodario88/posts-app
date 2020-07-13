@@ -8,16 +8,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
+                <li class="nav-item <?= Helper::isUrlActive(url('/')) ?>">
+                    <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
+                <li class="nav-item <?= Helper::isUrlActive(url('/dashboard')) ?>">
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                <li class="nav-item <?= Helper::isUrlActive(url('/contactus')) ?>">
+                    <a class="nav-link" href="/contactus">Contact</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto nav-flex-icons">

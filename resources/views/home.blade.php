@@ -9,7 +9,7 @@
         src="https://user-images.githubusercontent.com/51726945/85145615-3326c600-b223-11ea-84bf-319fb54949b5.png"
         alt="" srcset="">
     <!-- Title -->
-    <h2 class="mt-5 card-title h2">Test Laravel 7 Application</h2>
+    <h2 class="mt-5 card-title h2">Test Laravel 7 - Posts Application</h2>
 
     <!-- Subtitle -->
     <p class="indigo-text my-4 font-weight-bold">Powered by Digital One</p>
