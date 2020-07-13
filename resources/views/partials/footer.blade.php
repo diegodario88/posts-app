@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="page-footer font-small unique-color fixed-bottom">
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://www.digitalone.com.br/"> Digital One</a>
+        <a href="https://www.github.com/diegodario88"> Diego Dario</a>
     </div>
 </footer>
 <!-- JQuery -->

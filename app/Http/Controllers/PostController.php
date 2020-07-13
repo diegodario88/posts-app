@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Posts;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
@@ -46,7 +47,12 @@ class PostController extends Controller
      */
     public function show(Posts $posts)
     {
-        //
+        $posts = DB::table('posts')
+			        ->join('users', 'users.id', '=', 'posts.id_user')
+			        ->orderBy('posts.created_at', 'DESC')
+                    ->get();
+                    
+        return view('dashboard', compact('posts'));
     }
 
     /**
