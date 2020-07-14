@@ -10,7 +10,7 @@
 <!--Grid row-->
 <div class="row mb-4" style="margin: 0 auto; display: flex; justify-content: center;">
     <!--Grid column-->
-    <?php foreach ($posts as $indice => $post) : ?>
+     <?php foreach ($posts as $indice => $post) : ?>
         <?= view('partials.card',  ['indice' => $indice, 'post' => $post]) ?>
     <?php endforeach; ?>
     <!-- Modal Form Post -->

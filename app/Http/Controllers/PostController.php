@@ -8,82 +8,59 @@ use Illuminate\Support\Facades\DB;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    protected $repository;
+
+    public function _construct(Posts $post)
     {
-        //
+        $this->repository = $post;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Posts $posts)
     {
         $posts = DB::table('posts')
-			        ->join('users', 'users.id', '=', 'posts.id_user')
-			        ->orderBy('posts.created_at', 'DESC')
-                    ->get();
-                    
+            ->select(
+                'posts.id',
+                'id_user',
+                'title',
+                'description',
+                'img_url',
+                'posts.created_at',
+                'name',
+                'avatar_url',
+                'email'
+            )
+            ->join('users', 'users.id', '=', 'posts.id_user')
+            ->orderBy('posts.created_at', 'DESC')
+            ->get();
+
         return view('dashboard', compact('posts'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
     public function edit(Posts $posts)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, Posts $posts)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy(Posts $posts)
     {
         //
