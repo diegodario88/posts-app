@@ -49,10 +49,10 @@ class PostController extends Controller
         return view('dashboard', compact('posts'));
     }
 
-    
+
     public function edit(Posts $posts)
     {
-        //
+
     }
 
 
